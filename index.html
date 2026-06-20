@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Sabor Caribeño — Digital Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#D98E1F;
+    --gold-light:#F4B731;
+    --teal:#0C7E78;
+    --teal-deep:#0C6B58;
+    --turq:#1AAFA8;
+    --turq-light:#6FE0DA;
+    --cream:#FFFDF8;
+    --cream-card:#FFF9EE;
+    --ink:#2B2620;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    font-family:'Nunito',sans-serif;
+    color:var(--ink);
+  }
+  .wrap{max-width:560px;margin:0 auto;padding-bottom:60px;}
+
+  /* HEADER */
+  header{
+    background:linear-gradient(180deg,#0C6B58 0%,#0F8C82 55%,#1AAFA8 100%);
+    padding:28px 20px 36px;
+    text-align:center;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  header svg.logo{width:118px;height:118px;display:block;margin:0 auto 10px;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.25));}
+  header h1{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:30px;
+    margin:4px 0 2px;
+    letter-spacing:0.5px;
+    text-shadow:0 2px 4px rgba(0,0,0,0.2);
+  }
+  header p.slogan{
+    margin:0 0 6px;
+    font-style:italic;
+    font-size:14.5px;
+    opacity:0.95;
+  }
+  header p.loc{
+    margin:0;
+    font-size:12.5px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    opacity:0.85;
+  }
+  .wave-bottom{display:block;width:100%;height:30px;margin-top:-2px;}
+
+  /* NAV */
+  nav{
+    position:sticky; top:0; z-index:20;
+    display:flex; overflow-x:auto;
+    background:#fff;
+    border-bottom:2px solid #F0E6CE;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+    -ms-overflow-style:none; scrollbar-width:none;
+  }
+  nav::-webkit-scrollbar{display:none;}
+  nav a{
+    flex:0 0 auto;
+    padding:13px 16px;
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:14px;
+    color:var(--teal-deep);
+    text-decoration:none;
+    white-space:nowrap;
+    border-bottom:3px solid transparent;
+  }
+  nav a:active, nav a.active{
+    color:var(--gold);
+    border-bottom:3px solid var(--gold);
+  }
+
+  /* SECTIONS */
+  section{padding:30px 20px 6px;scroll-margin-top:54px;}
+  .sec-title{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:21px;
+    color:var(--teal-deep);
+    margin:0 0 4px;
+  }
+  .sec-title .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);flex:0 0 auto;}
+  .sec-sub{font-size:12.5px;color:#8a8070;margin:0 0 16px;padding-left:20px;}
+
+  .item{
+    background:var(--cream-card);
+    border:1px solid #F0E2C0;
+    border-radius:14px;
+    padding:14px 16px;
+    margin-bottom:12px;
+    position:relative;
+  }
+  .item-top{display:flex; justify-content:space-between; align-items:baseline; gap:10px;}
+  .item-name{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:16.5px;
+    color:var(--ink);
+  }
+  .item-price{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    color:#fff;
+    background:var(--gold);
+    padding:3px 10px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+  .item-desc{
+    font-size:13.5px;
+    color:#5b5448;
+    margin-top:5px;
+    line-height:1.45;
+  }
+
+  .divider{
+    display:block;width:100%;height:26px;margin:26px 0 -4px;
+  }
+
+  footer{
+    text-align:center;
+    padding:34px 24px 10px;
+    color:var(--teal-deep);
+  }
+  footer .fline{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:15px;
+  }
+  footer .fsmall{
+    font-size:11.5px;
+    color:#9a9282;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg class="logo" viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="sunGrad" cx="40%" cy="35%" r="70%">
+          <stop offset="0%" stop-color="#FFE08A"/>
+          <stop offset="55%" stop-color="#F4B731"/>
+          <stop offset="100%" stop-color="#DD8F12"/>
+        </radialGradient>
+        <linearGradient id="seaGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#6FE0DA"/><stop offset="100%" stop-color="#1AAFA8"/>
+        </linearGradient>
+        <linearGradient id="seaGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#1AAFA8"/><stop offset="100%" stop-color="#0C7E78"/>
+        </linearGradient>
+        <linearGradient id="palmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1F8A74"/><stop offset="100%" stop-color="#0C6B58"/>
+        </linearGradient>
+        <clipPath id="cclip"><circle cx="300" cy="280" r="248"/></clipPath>
+      </defs>
+      <circle cx="300" cy="280" r="262" fill="none" stroke="#D98E1F" stroke-width="8"/>
+      <circle cx="300" cy="280" r="250" fill="none" stroke="#15A39C" stroke-width="3"/>
+      <circle cx="300" cy="280" r="248" fill="#FFFDF8"/>
+      <g clip-path="url(#cclip)">
+        <g transform="translate(20,-25)">
+          <path d="M300.0,117.0 L322.3,151.9 L359.0,132.8 L360.8,174.2 L402.2,176.0 L383.1,212.7 L418.0,235.0 L383.1,257.3 L402.2,294.0 L360.8,295.8 L359.0,337.2 L322.3,318.1 L300.0,353.0 L277.7,318.1 L241.0,337.2 L239.2,295.8 L197.8,294.0 L216.9,257.3 L182.0,235.0 L216.9,212.7 L197.8,176.0 L239.2,174.2 L241.0,132.8 L277.7,151.9 Z" fill="url(#sunGrad)"/>
+          <circle cx="300" cy="235" r="80" fill="url(#sunGrad)" stroke="#C97A0E" stroke-width="2"/>
+        </g>
+        <path d="M188,520 C178,440 198,360 222,290 C228,272 224,250 214,232" fill="none" stroke="url(#palmGrad)" stroke-width="14" stroke-linecap="round"/>
+        <path d="M214.0,232.0 C173.0,223.0 125.0,233.4 96.4,243.0 C124.5,239.1 171.6,239.0 214.0,232.0 Z" fill="url(#palmGrad)"/>
+        <path d="M214.0,232.0 C170.6,202.0 113.6,189.5 88.4,185.6 C110.4,195.1 161.6,217.6 214.0,232.0 Z" fill="url(#palmGrad)"/>
+        <path d="M214.0,232.0 C192.2,184.1 154.5,143.9 150.6,123.1 C149.0,146.5 176.8,191.3 214.0,232.0 Z" fill="url(#palmGrad)"/>
+        <path d="M214.0,232.0 C222.9,188.2 220.2,143.3 238.3,119.3 C214.5,142.3 207.2,185.4 214.0,232.0 Z" fill="url(#palmGrad)"/>
+        <path d="M214.0,232.0 C246.5,208.0 274.9,178.1 305.9,163.5 C271.1,174.3 235.9,197.4 214.0,232.0 Z" fill="url(#palmGrad)"/>
+        <path d="M214.0,232.0 C251.5,231.2 291.3,224.2 320.3,223.3 C290.0,219.4 247.8,217.7 214.0,232.0 Z" fill="url(#palmGrad)"/>
+        <circle cx="214" cy="234" r="9" fill="#7A4A23"/>
+        <circle cx="226" cy="246" r="7" fill="#7A4A23"/>
+        <path d="M50,400 Q120,378 190,400 T330,400 T470,400 T610,400 V560 H50 Z" fill="url(#seaGrad1)"/>
+        <path d="M40,440 Q130,415 200,440 T350,440 T500,440 T620,440 V570 H40 Z" fill="url(#seaGrad2)"/>
+        <path d="M50,402 Q120,380 190,402 T330,402 T470,402 T610,402" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.85"/>
+        <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.9">
+          <path d="M265,330 C255,310 280,300 270,278 C262,260 282,250 274,232"/>
+          <path d="M300,335 C290,313 315,303 305,280 C297,262 317,250 309,232"/>
+          <path d="M335,330 C325,310 350,300 340,278 C332,260 352,250 344,232"/>
+        </g>
+        <path d="M205,398 C205,398 220,460 300,460 C380,460 395,398 395,398 Z" fill="#D98E1F"/>
+        <path d="M205,398 C205,398 220,452 300,452 C380,452 395,398 395,398 Z" fill="#F4B731"/>
+        <ellipse cx="300" cy="398" rx="95" ry="20" fill="#FFF6E1" stroke="#D98E1F" stroke-width="4"/>
+        <ellipse cx="300" cy="396" rx="80" ry="13" fill="#1AAFA8" opacity="0.9"/>
+        <circle cx="270" cy="393" r="8" fill="#F4D03F"/><circle cx="285" cy="398" r="7" fill="#F4D03F"/>
+        <circle cx="330" cy="394" r="9" fill="#F3F1E7"/><circle cx="315" cy="399" r="6" fill="#C1502B"/>
+        <circle cx="300" cy="390" r="6" fill="#2F8F6B"/>
+      </g>
+    </svg>
+    <h1>El Sabor Caribeño</h1>
+    <p class="slogan">"Where the sea breeze meets the flavor!"</p>
+    <p class="loc">Barranquilla · Atlántico · Colombia</p>
+    <svg class="wave-bottom" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0,15 Q150,0 300,15 T600,15 V30 H0 Z" fill="#FFFDF8"/></svg>
+  </header>
+
+  <nav id="nav">
+    <a href="#appetizers" class="active">Appetizers</a>
+    <a href="#salads">Salads</a>
+    <a href="#mains">Mains</a>
+    <a href="#desserts">Desserts</a>
+    <a href="#drinks">Drinks</a>
+  </nav>
+
+  <section id="appetizers">
+    <h2 class="sec-title"><span class="dot"></span>Appetizers</h2>
+    <p class="sec-sub">Little Caribbean bites to start the feast</p>
+
+    <div class="item">
+      <div class="item-top"><span class="item-name">Patacones con Hogao</span><span class="item-price">$8,000</span></div>
+      <div class="item-desc">Twice-fried green plantain topped with tomato and onion sauce. A classic Caribbean starter.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Buñuelos Costeños</span><span class="item-price">$6,500</span></div>
+      <div class="item-desc">Savory cheese fritters, crispy on the outside and soft inside. Perfect to share.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Ceviche de Camarón</span><span class="item-price">$12,000</span></div>
+      <div class="item-desc">Fresh shrimp marinated in lime juice with onion, cilantro, and ají. Refreshing and light.</div>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 600 26" preserveAspectRatio="none"><path d="M0,13 Q150,26 300,13 T600,13" fill="none" stroke="#1AAFA8" stroke-width="3" opacity="0.5"/></svg>
+
+  <section id="salads">
+    <h2 class="sec-title"><span class="dot"></span>Salads</h2>
+    <p class="sec-sub">Fresh, tropical, and light</p>
+
+    <div class="item">
+      <div class="item-top"><span class="item-name">Ensalada de Aguacate y Mango</span><span class="item-price">$9,500</span></div>
+      <div class="item-desc">Ripe avocado and tropical mango with mixed greens, lime dressing, and sesame seeds.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Ensalada Caribeña</span><span class="item-price">$7,000</span></div>
+      <div class="item-desc">Fresh cabbage, carrot, tomato, cucumber, and corn with coconut-lime vinaigrette.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Ensalada de Palmito</span><span class="item-price">$10,000</span></div>
+      <div class="item-desc">Heart of palm with cherry tomatoes, olives, and lemon-herb dressing.</div>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 600 26" preserveAspectRatio="none"><path d="M0,13 Q150,0 300,13 T600,13" fill="none" stroke="#D98E1F" stroke-width="3" opacity="0.5"/></svg>
+
+  <section id="mains">
+    <h2 class="sec-title"><span class="dot"></span>Main Dishes</h2>
+    <p class="sec-sub">The heart of Caribbean cooking</p>
+
+    <div class="item">
+      <div class="item-top"><span class="item-name">Sancocho de Pescado</span><span class="item-price">$22,000</span></div>
+      <div class="item-desc">Traditional Caribbean fish soup with yuca, plantain, corn, cilantro, and coconut milk. Served with white rice.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Arroz con Coco y Camarones</span><span class="item-price">$25,000</span></div>
+      <div class="item-desc">Coconut rice cooked in fresh coconut milk, topped with sautéed shrimp in garlic butter sauce.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Bandeja Costeña</span><span class="item-price">$28,000</span></div>
+      <div class="item-desc">Grilled fish fillet, coconut rice, red beans, fried plantain (tajadas), and fresh salad. A true Caribbean feast!</div>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 600 26" preserveAspectRatio="none"><path d="M0,13 Q150,26 300,13 T600,13" fill="none" stroke="#1AAFA8" stroke-width="3" opacity="0.5"/></svg>
+
+  <section id="desserts">
+    <h2 class="sec-title"><span class="dot"></span>Desserts</h2>
+    <p class="sec-sub">A sweet finish, coastal style</p>
+
+    <div class="item">
+      <div class="item-top"><span class="item-name">Arroz con Leche Caribeño</span><span class="item-price">$7,000</span></div>
+      <div class="item-desc">Creamy rice pudding with cinnamon, coconut milk, and raisins. Served warm or cold.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Cocadas</span><span class="item-price">$4,500</span></div>
+      <div class="item-desc">Traditional coconut sweets — soft and chewy, made with fresh coconut and panela.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Torta de Plátano Maduro</span><span class="item-price">$8,500</span></div>
+      <div class="item-desc">Ripe plantain cake with cream cheese filling. Sweet, moist, and incredibly delicious.</div>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 600 26" preserveAspectRatio="none"><path d="M0,13 Q150,0 300,13 T600,13" fill="none" stroke="#D98E1F" stroke-width="3" opacity="0.5"/></svg>
+
+  <section id="drinks">
+    <h2 class="sec-title"><span class="dot"></span>Drinks</h2>
+    <p class="sec-sub">Cool down, coastal breeze included</p>
+
+    <div class="item">
+      <div class="item-top"><span class="item-name">Jugo de Corozo</span><span class="item-price">$5,000</span></div>
+      <div class="item-desc">Refreshing tropical fruit juice from the Caribbean coast. Served cold with sugar.</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Limonada de Coco</span><span class="item-price">$6,500</span></div>
+      <div class="item-desc">Fresh-squeezed lemonade blended with coconut cream. Our signature drink!</div>
+    </div>
+    <div class="item">
+      <div class="item-top"><span class="item-name">Agua de Panela con Limón</span><span class="item-price">$3,500</span></div>
+      <div class="item-desc">Traditional sugarcane water with fresh lime juice. Served hot or cold.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fline">¡Gracias por su visita! · Thank you for visiting!</div>
+    <div class="fsmall">El Sabor Caribeño — Traditional Caribbean Colombian cuisine with a modern twist</div>
+  </footer>
+
+</div>
+
+<script>
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = sections[0].id;
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 70) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>
