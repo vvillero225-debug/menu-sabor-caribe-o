@@ -1,0 +1,99 @@
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sunGrad" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#FFE08A"/>
+      <stop offset="55%" stop-color="#F4B731"/>
+      <stop offset="100%" stop-color="#DD8F12"/>
+    </radialGradient>
+    <linearGradient id="seaGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6FE0DA"/>
+      <stop offset="100%" stop-color="#1AAFA8"/>
+    </linearGradient>
+    <linearGradient id="seaGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1AAFA8"/>
+      <stop offset="100%" stop-color="#0C7E78"/>
+    </linearGradient>
+    <linearGradient id="palmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F8A74"/>
+      <stop offset="100%" stop-color="#0C6B58"/>
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="300" cy="280" r="248"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer rings -->
+  <circle cx="300" cy="280" r="262" fill="none" stroke="#D98E1F" stroke-width="8"/>
+  <circle cx="300" cy="280" r="250" fill="none" stroke="#15A39C" stroke-width="3"/>
+
+  <!-- Background -->
+  <circle cx="300" cy="280" r="248" fill="#FFFDF8"/>
+
+  <g clip-path="url(#circleClip)">
+
+    <!-- Sun -->
+    <g transform="translate(20,-25)">
+      <path d="M300.0,117.0 L322.3,151.9 L359.0,132.8 L360.8,174.2 L402.2,176.0 L383.1,212.7 L418.0,235.0 L383.1,257.3 L402.2,294.0 L360.8,295.8 L359.0,337.2 L322.3,318.1 L300.0,353.0 L277.7,318.1 L241.0,337.2 L239.2,295.8 L197.8,294.0 L216.9,257.3 L182.0,235.0 L216.9,212.7 L197.8,176.0 L239.2,174.2 L241.0,132.8 L277.7,151.9 Z"
+            fill="url(#sunGrad)"/>
+      <circle cx="300" cy="235" r="80" fill="url(#sunGrad)" stroke="#C97A0E" stroke-width="2"/>
+    </g>
+
+    <!-- Palm tree, left side -->
+    <g>
+      <path d="M188,520 C178,440 198,360 222,290 C228,272 224,250 214,232"
+            fill="none" stroke="url(#palmGrad)" stroke-width="14" stroke-linecap="round"/>
+      <!-- fronds -->
+      <path d="M214.0,232.0 C173.0,223.0 125.0,233.4 96.4,243.0 C124.5,239.1 171.6,239.0 214.0,232.0 Z" fill="url(#palmGrad)"/>
+      <path d="M214.0,232.0 C170.6,202.0 113.6,189.5 88.4,185.6 C110.4,195.1 161.6,217.6 214.0,232.0 Z" fill="url(#palmGrad)"/>
+      <path d="M214.0,232.0 C192.2,184.1 154.5,143.9 150.6,123.1 C149.0,146.5 176.8,191.3 214.0,232.0 Z" fill="url(#palmGrad)"/>
+      <path d="M214.0,232.0 C222.9,188.2 220.2,143.3 238.3,119.3 C214.5,142.3 207.2,185.4 214.0,232.0 Z" fill="url(#palmGrad)"/>
+      <path d="M214.0,232.0 C246.5,208.0 274.9,178.1 305.9,163.5 C271.1,174.3 235.9,197.4 214.0,232.0 Z" fill="url(#palmGrad)"/>
+      <path d="M214.0,232.0 C251.5,231.2 291.3,224.2 320.3,223.3 C290.0,219.4 247.8,217.7 214.0,232.0 Z" fill="url(#palmGrad)"/>
+      <path d="M214.0,232.0 Q143.5,233.5 96.4,243.0" fill="none" stroke="#0C6B58" stroke-width="1.2" opacity="0.5"/>
+      <path d="M214.0,232.0 Q138.7,197.9 88.4,185.6" fill="none" stroke="#0C6B58" stroke-width="1.2" opacity="0.5"/>
+      <path d="M214.0,232.0 Q176.0,160.2 150.6,123.1" fill="none" stroke="#0C6B58" stroke-width="1.2" opacity="0.5"/>
+      <path d="M214.0,232.0 Q228.6,158.3 238.3,119.3" fill="none" stroke="#0C6B58" stroke-width="1.2" opacity="0.5"/>
+      <path d="M214.0,232.0 Q269.2,185.3 305.9,163.5" fill="none" stroke="#0C6B58" stroke-width="1.2" opacity="0.5"/>
+      <path d="M214.0,232.0 Q277.8,222.0 320.3,223.3" fill="none" stroke="#0C6B58" stroke-width="1.2" opacity="0.5"/>
+      <circle cx="214" cy="234" r="9" fill="#7A4A23"/>
+      <circle cx="226" cy="246" r="7" fill="#7A4A23"/>
+    </g>
+
+    <!-- Sea -->
+    <path d="M50,400 Q120,378 190,400 T330,400 T470,400 T610,400 V560 H50 Z" fill="url(#seaGrad1)"/>
+    <path d="M40,440 Q130,415 200,440 T350,440 T500,440 T620,440 V570 H40 Z" fill="url(#seaGrad2)"/>
+    <path d="M50,402 Q120,380 190,402 T330,402 T470,402 T610,402"
+          fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.85"/>
+
+    <!-- Steam -->
+    <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.9">
+      <path d="M265,330 C255,310 280,300 270,278 C262,260 282,250 274,232"/>
+      <path d="M300,335 C290,313 315,303 305,280 C297,262 317,250 309,232"/>
+      <path d="M335,330 C325,310 350,300 340,278 C332,260 352,250 344,232"/>
+    </g>
+
+    <!-- Bowl -->
+    <g>
+      <ellipse cx="300" cy="468" rx="14" ry="4" fill="#0C7E78" opacity="0.25"/>
+      <path d="M205,398 C205,398 220,460 300,460 C380,460 395,398 395,398 Z" fill="#D98E1F"/>
+      <path d="M205,398 C205,398 220,452 300,452 C380,452 395,398 395,398 Z" fill="#F4B731"/>
+      <ellipse cx="300" cy="398" rx="95" ry="20" fill="#FFF6E1" stroke="#D98E1F" stroke-width="4"/>
+      <ellipse cx="300" cy="396" rx="80" ry="13" fill="#1AAFA8" opacity="0.9"/>
+      <circle cx="270" cy="393" r="8" fill="#F4D03F"/>
+      <circle cx="285" cy="398" r="7" fill="#F4D03F"/>
+      <circle cx="330" cy="394" r="9" fill="#F3F1E7"/>
+      <circle cx="315" cy="399" r="6" fill="#C1502B"/>
+      <circle cx="300" cy="390" r="6" fill="#2F8F6B"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="300" y="635" text-anchor="middle"
+        font-family="'Baloo 2','Poppins','Arial Rounded MT Bold',Verdana,sans-serif"
+        font-weight="800" font-size="54" letter-spacing="1" fill="#0C7E78" opacity="0.3">El Sabor Caribeño</text>
+  <text x="297" y="632" text-anchor="middle"
+        font-family="'Baloo 2','Poppins','Arial Rounded MT Bold',Verdana,sans-serif"
+        font-weight="800" font-size="54" letter-spacing="1" fill="#D98E1F">El Sabor Caribeño</text>
+
+  <path d="M170,668 Q230,648 300,668 T430,668" fill="none" stroke="#15A39C" stroke-width="5" stroke-linecap="round"/>
+</svg>
